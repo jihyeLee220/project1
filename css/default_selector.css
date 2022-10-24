@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+h6{
+    font-size: 24px;
+    text-decoration-color: blue;
+    text-decoration-line: 1px;
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+}
+.tit{
+    color: chocolate;
+}
+#myH6{
+    color: red;
+}
+h3, h6, .tit, #myH6{
+    background-color: yellow;
+}
+h6:only-child{
+    background-color: orange;
+}
