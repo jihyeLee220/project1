@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number, range</title>
+    <style>
+        *{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <h3>number</h3>
+        <ul>
+            <li>
+                <input type="checkbox"> 선물용 3kg <input name="num" type="number" max="5" min="0" step="2" value="2"> (최대5개)
+            </li>
+            <li>
+                <input type="checkbox"> 선물용 5kg <input name="num" type="number" max="3" min="0"> (최대3개)
+            </li>
+        </ul>
+        <hr>
+        <h3>range</h3>
+        <ul>
+            <li>
+                <input type="checkbox"> 선물용 3kg 
+                <input id="rng1" name="rng" type="range" max="100" min="0" step="1" value="2"> (최대5개)
+                <input type="text" readonly size="5" value="2" id="cnt1">
+            </li>
+            <li>
+                <input type="checkbox"> 선물용 5kg <input name="rng" type="range" max="3" min="0"> (최대3개)
+            </li>
+        </ul>
+        <input type="submit" value="등록">
+    </form>
+    <script>
+        //rng1에 값이 변경되면 뒤의 함수를 실행
+        rng1.oninput = function () {
+            cnt1.value = rng1.value;
+        };
+    </script>
+</body>
+</html>

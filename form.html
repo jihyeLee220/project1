@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼요소의 속성</title>
+</head>
+<body>
+    <form action="#" method="get" id="orderFrm">
+        <fieldset>
+            <legend>배송정보</legend>
+            <ul>
+                <li><label>이름 <input type="text" name="user-name"></label></li>
+                <li><label>배송주소 <input type="text"></label></li>
+                <li><label>이메일 <input type="email"></label></li>
+                <li><label>연락처 <input type="tel"></label></li>
+                <li><label>배송지정(주문일로부터 최소 3일 이후) <input type="date"></label></li>
+            </ul>
+        </fieldset>
+        <input type="submit" value="주문하기"><input type="reset" value="취소하기">
+        <input type="image" src="/img/a.png" alt="주문하기" style="width: 50px; height: 30px;">
+        <input type="button" value="주문하기" onclick="orderFrm.submit();">
+        <input type="button" value="새창" onclick="window.open('date.html','mywin','width=250,height=300,top=50,left=50')">
+    </form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{list-style: none;}
+        div{
+            width: 520px; border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>예약 정보</h1>
+        <form>
+            <ul>
+                <li>
+                    <label for="user-name">이름</label>
+                    <input type="text" id="user-name">
+                </li>
+                <li>
+                    <label for="user-tel">전화번호</label>
+                    <input type="tel" id="user-tel">
+                </li>
+                <li>
+                    <label for="user-mail">이메일</label>
+                    <input type="email" id="user-mail">
+                </li>
+                <li>
+                    <input type="submit" value="예약하기">
+                </li>
+            </ul>
+        </form>
+    </div>
+    <br>
+    <div>
+        <h1>프런트엔드 개발자 지원서</h1>
+        <p>HTML,CSS,자바스크립트의 기술을 이해하고 실무경험이 있는 분을 찾습니다.</p>
+        <hr>
+        <form>
+        <b>개인정보</b>
+        <ul>
+            <li>
+                <label for="u-name">이름</label>
+                <input type="text" id="u-name" placeholder="공백 없이 입력하세요.">
+            </li>
+            <li>
+                <label for="u-tel">연락처</label>
+                <input type="tel" id="u-tel">
+            </li>
+        </ul>
+        <b>지원 분야</b>
+        <ul>
+            <li><input type="radio" value="웹퍼블리싱" checked>웹퍼블리싱</li>
+            <li><input type="radio" value="웹 애플리케이션 개발">웹 애플리케이션 개발
+            <li><input type="radio" value="개발 환경 개선">개발 환경 개선</li>
+        </ul>
+        <b>지원 동기</b>
+        <br><br>
+        <textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요" style="resize: none;"></textarea><br>
+        <button type="submit">접수하기</button>
+        <button type="reset">다시 쓰기</button>
+        </form>
+    </div>
+</body>
+</html>
