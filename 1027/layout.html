@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>레이아웃</h3>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav ul li{
+            display: inline-block;
+            padding: 20px;
+            margin: 0 20px;
+            border: 1px solid #000;
+        }
+        nav ul li:hover{
+            cursor: pointer;
+            transition: .4s;
+            /* 0.4s == 400ms */
+            background-color: rgba(0, 100, 0, 0.3);
+        }
+        .float{
+            float: right;
+            background-color: red;
+            border: 1px solid #000;
+            width: 100px; height: 200px;
+        }
+        hr{
+            clear: both;
+        }
+        img{
+            float: right;
+            margin: 100px 0 0 100px;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </nav>
+    <div class="float">1</div>
+    <div class="float">2</div>
+    <div class="float">3</div>
+    <hr>
+    <div>
+        <img src="/img/1.jpg" alt="호랑이">
+        마진이란 콘텐츠 간의 간격이고, 간격을 벌리기 위해서는 경계를 필요로 합니다. 브라우저는 부모 박스와 첫 번째(마지막) 자식 박스 간의 경계를 그 사이에 있는 border / padding / inline 콘텐츠 유무로 판단합니다. 앞에 설명했던 빈 박스의 마진 상쇄 현상과는 조금 다르게, 이미 명시적으로 height / min-height 값을 줬더라도 이번 경우에선 신경 쓰지 않습니다.
+
+따라서 부모와 첫 번째(마지막) 자식 사이에 inline 콘텐츠(텍스트 등)가 없거나, 상단(하단)에 명시적으로 padding 또는 border 값을 주지 않았다면 마진이 겹치게 됩니다. 이때, 자식 요소의 마진이 더 크든 작든 상관없이 상쇄된 마진은 부모 박스의 바깥으로만 렌더링이 됩니다. 
+    </div>
+    <style>
+        .box1, .box2{
+            width: 100px; height: 100px; background-color: red; border: 1px solid #000;
+            float: left;
+        }
+        .box2{}
+        .box3{ height: 100px; background-color: green; clear: both;}
+        .par{
+            background-color: blue;
+            overflow: hidden;
+        }
+        /* .par::after{
+            content: "";
+            clear: both;
+            display: table;
+            /* ::after{
+            content: ""; 꼭있어야함 */
+    </style>
+    <div class="par">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+</body>
+</html>

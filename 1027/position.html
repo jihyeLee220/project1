@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+        .static{
+            position: static;
+            background-color: red;
+        }
+        .relative{
+            position: relative;
+            background-color: aqua;
+            top:20px;
+            left: 100px;
+            font-size: 12px;
+        }
+        .par{
+            width: 100%;
+            height: 200px;
+            position: relative;
+            background-color: aliceblue;
+        }
+        .absolute{
+            /* 넓이가 사라짐  */
+            background-color: thistle;
+            position: absolute;
+            top: 0px; left: 0px;
+            font-size: 12px;
+        }
+        .fixed{
+            position: fixed;
+            background-color: chartreuse;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .sticky{
+            background-color: darkmagenta;
+            position: sticky;
+            top:605px;
+            left: 100px;
+            transition: 0.4s;
+        }
+        .parents{
+            position: relative;
+        }
+        .red{
+            background-color: red;
+            top:50px; left: 50px;
+            z-index: 1;
+        }
+        .green{
+            background-color: green;
+            top:110px; left: 110px;
+            z-index: 2;
+        }
+        .blue{
+            background-color: blue;
+            top:100px; left: 100px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <h3>웹 요소의 위치 지정하기</h3>
+    <!-- static = 기본 -->
+    <div class="static">static<br>기본값이며 움직 일수 없음</div>
+    <!-- relative -->
+    <div class="relative">relative<br>생성된 위치를 기준으로 움직임 / 위치를 차지하고 있음</div>
+    <!-- static = 기본 -->
+    <div class="static">static<br>기본값이며 움직 일수 없음</div>
+    <!-- absolute -->
+    <div class="par">
+        <div class="absolute">absolute <br>부모(relative)의 기준으로 움직임/부모가 없으면 window기준/위치를 차지하지않음</div>
+    </div>
+    <!-- static = 기본 -->
+    <div class="static">static<br>기본값이며 움직 일수 없음</div>
+    <!-- fixed -->
+    <div class="fixed">fixed<br>viewport기준 / 자리 차지하지않음</div>
+    <!-- static = 기본 -->
+    <div class="static">static<br>기본값이며 움직 일수 없음</div>
+    <!-- sticky -->
+    <div class="sticky">sticky<br>자리차지를 함 / top값을 설정해줘야함</div>
+    <!-- static = 기본 -->
+    <div class="static">static<br>기본값이며 움직 일수 없음</div>
+    <hr>
+    <p>겹침 설정 z-index 기본적으로 아래있는 요소가 위로 올라감</p>
+    <p>z-index로 겹침수정가능(단, 부모가 같아야함)</p>
+    <div class="parents">
+        <div class="absolute red">1</div>
+        <div class="absolute blue">2</div>
+        <div class="absolute green">3</div>
+    </div>
+</body>
+</html>
