@@ -1,0 +1,37 @@
+.content {
+  display: flex; /* 플렉스 컨테이너 지정 */
+  background-color: #eee;
+  border: 1px solid #222;
+  margin-bottom: 30px;
+}
+.content ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0px;
+}
+.content ul li {
+  padding: 5px 45px;
+  margin: 5px;
+  background-color: #222;
+}
+.box {
+  padding: 5px 45px;
+  margin: 5px;
+  background-color: #222;
+}
+#opt1 {
+  justify-content: flex-start;
+}
+#opt2 {
+  justify-content: flex-end;
+}
+#opt3 {
+  justify-content: center;
+}
+#opt4 {
+  justify-content: space-between;
+}
+#opt5 {
+  justify-content: space-around;
+}
