@@ -177,3 +177,20 @@ for (i = 0; i < 5; i++) {
   }
   document.write(`<br>`);
 }
+
+for (i = 0; i < 5; i++) {
+  for (j = 0; j <= i; j++) {
+    document.write("*");
+  }
+  document.write("<br>");
+}
+
+for (let a = 0; a < 5; a++) {
+  for (let b = 5; b > a; b--) {
+    document.write("&nbsp");
+  }
+  for (b = 0; b <= a; b++) {
+    document.write("*");
+  }
+  document.write("<br>");
+}

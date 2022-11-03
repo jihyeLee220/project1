@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: 50px auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px double #222;
+            background-color: #d8f0fc;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 80px;
+        }
+
+        .accent {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="computer"></div>
+    <div>
+        <button id="rkdnl" class="btn">가위</button>
+        <button id="qkdnl" class="btn">바위</button>
+        <button id="qh" class="btn">보</button>
+
+    </div>
+    <div id="score">0</div>
+    <script>
+        var input_num;
+        var input_com;
+        var ans_num, ans_com;
+
+
+        input_num = prompt("주먹, 가위 , 보 중에서 선택하세요 : 주먹(1) 가위(2) 보(3)");
+        input_com = Math.floor((Math.random() * (4 - 1) + 1));
+
+
+
+        function rcp(num1, num2) {
+
+
+            switch (num1) {
+                case '1': ans_num = '주먹';
+                    num1 = 1;
+                    break;
+                case '2': ans_num = '가위';
+                    num1 = 2;
+                    break;
+                case '3': ans_num = '보';
+                    num1 = 3;
+                    break;
+            }
+
+            switch (num2) {
+                case 1: ans_com = '주먹';
+                    break;
+                case 2: ans_com = '가위';
+                    break;
+                case 3: ans_com = '보';
+                    break;
+            }
+
+            if (num1 == num2) { //비겼을 때.
+                document.write("비겼습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+            }
+            //1 : 주먹 2 : 가위 3: 보
+            else {
+                switch (num1) {
+                    case 1: //나 : 주먹
+                        if (num2 == 3) { //computer : 가위
+                            document.write("졌습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+                            break;
+                        }
+                        else {
+                            document.write("이겼습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+                            break;
+                        }
+
+                    case 2: //나 : 가위
+                        if (num2 == 1) { //computer : 가위
+                            document.write("졌습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+                            break;
+                        }
+                        else {
+                            document.write("이겼습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+                            break;
+                        }
+
+                    case 3: //나 : 보
+                        if (num2 == 1) {
+                            document.write("이겼습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+                            break;
+                        }
+                        else {
+                            document.write("졌습니다.<br> 나 : " + ans_num + " 컴퓨터 : " + ans_com);
+                            break;
+                        }
+
+                    default:
+                        document.write("잘못된 입력입니다.");
+                        break;
+                }
+            }
+
+        }
+
+        rcp(input_num, input_com);
+
+
+
+        // let now = new Date("2022-11-03");
+        // let firstDay = new Date("2022-10-29");
+
+        // let toNow = now.getTime();
+        // let toFirst = firstDay.getTime();
+        // let passesTime = toNow - toFirst;
+
+        // passesTime = Math.round(passesTime / (1000 * 60 * 60 * 24));
+
+        // document.querySelector("#result").innerText = passesTime;
+
+        // var numbers = ["one", "two", "three", "four"];
+
+        // for (let i = 0; i < numbers.length; i++) {
+        //     document.write(`<p>${numbers[i]}</p>`);
+        // }
+
+        // let num = [1, 2, 3];
+        // let chars = ["a", "b", "c", "d"];
+
+        // document.write(num.concat(chars) + "<br>");
+        // document.write(chars.concat(num));
+
+        //     let nums = [1, 2, 3];
+        //     let chars = ["a", "b", "c", "d"];
+
+        //     let string1 = nums.join();
+        //     console.log(`구분자 없이 ${string1}`);
+        //     let string2 = chars.join("/");
+        //     console.log(`구분자 있는 ${string2}`);
+
+        // let nums = [1, 2, 3];
+
+        // let ret1 = nums.push(4, 5, 6);
+        // document.write(`length : ${ret1} | 배열 ${nums}`);
+
+        // let chars = ["a", "b", "c", "d"];
+
+        // let poppop1 = chars.pop();
+        // console.log(`마지막 요소는 ${poppop1}`);
+        // let poppop2 = chars.shift();
+        // console.log(`첫번째 요소는 ${poppop2}`);
+
+        // let numbers = [1, 2, 3, 4, 5, 6];
+        // let newNumbers = numbers.splice(2);
+        // document.write(`존재하는 배열 ${numbers}`);
+        // document.write(`삭제된 배열 ${newNumbers}`);
+
+        // let study = ["html", "css", "wep", "jqury"];
+        // let newStudy = study.splice(2, 1);
+        // console.log(newStudy);
+        // let newStudy2 = study.splice(2, 1, "js");
+        // console.log(newStudy2, study);
+
+        // let colors = ["red", "green", "blue", "white", "black"];
+        // let pick = colors.slice(3);
+        // console.log(pick)
+        // let pick2 = colors.slice(1, 3);
+        // console.log(pick2)
+        // let join1 = pick2.join(",");
+        // alert(join1)
+    </script>
+</body>
+
+</html>
