@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- 헤더시작 -->
+        <header>
+            <div class="header">
+                <div class="main_logo">
+                    <img src="img/jihye_logo.png" alt="">
+                </div>
+                <!-- 메뉴 클릭하면 해당 페이지로 스크롤이동  -->
+                <div class="right_menu">
+                    <div><a class="menu_text" onclick="portfolio()">portfolio</a></div>
+                    <div><a class="menu_text" onclick="about_me()">About_me</a></div>
+                    <div><a class="menu_text">contact</a></div>
+                </div>
+            </div>
+        </header>
+        <!-- 헤더 종료 -->
+        <div id="wrap">
+            <!-- 첫번째 main content 이미지 및 애니메이션 활용으로 이름과 프로필알림 -->
+            <div class="main">
+                <div class="main_img">
+                    <img src="img/KakaoTalk_20221109_114352621_01.jpg">
+                </div>
+                <div class="main_name">
+                    <h1>이 지혜 / WISDOM</h1>
+                    <h2>웹 퍼블리셔 / 프론트엔드 개발자</h2>
+                </div>
+                <div class="sns_box">
+                    <div class="rotate_sns">
+                        <a href="https://www.instagram.com/220.wlgp/">https://www.instagram.com/220.wlgp/</a>
+                    </div>
+                </div>
+                <div class="contact_box">
+                    <div class="rotate_sns">
+                        <a href="https://ziiihye.cafe24.com">https://ziiihye.cafe24.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 첫번째 main 종료 -->
+            <!-- 두번째 main 했던 프로젝트 모음 및 설명 -->
+            <div class="main2">
+                <!-- 제목 -->
+                <div class="profile">
+                    <p>What's My Project</p>
+                </div>
+                <!-- 프로젝트 1 안내 -->
+                <div class="project">
+                    <div class="point"></div>
+                    <div class="project_text">
+                        <p>개인 홈페이지</p>
+                        <ul class="project_text_list">
+                            <li>mysql, php, jquery, html, css으로 이루어진 개인용 웹사이트</li>
+                            <li>모든 페이지 미디어쿼리 적용</li>
+                            <li>제작 소요시간 : 웹 2주일/ 모바일 1주일</li>
+                            <li>1인 프로젝트</li>
+                        </ul>
+                    </div>
+                    <div class="project_img">
+                        <a href="https://ziiihye.cafe24.com/myblog/index.php"><img
+                                src="img/KakaoTalk_20221114_154108408.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- 프로젝트 2 안내 -->
+                <div class="project">
+                    <div class="point"></div>
+                    <div class="project_text">
+                        <p>무직타이거 홈페이지</p>
+                        <ul class="project_text_list">
+                            <li>mysql, php, jquery, html, css으로 이루어진 무직타이거 쇼핑몰</li>
+                            <li>기존 웹페이지 디자인 클론</li>
+                            <li>제작 소요시간 : 웹 2주일</li>
+                            <li>1인 프로젝트</li>
+                        </ul>
+                    </div>
+                    <div class="project_img">
+                        <a href="https://ziiihye.cafe24.com/muzik/index.php"><img
+                                src="img/KakaoTalk_20221114_161200819.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- 프로젝트 3 안내 -->
+                <div class="project">
+                    <div class="point"></div>
+                    <div class="project_text">
+                        <p>뮤지엄다 홈페이지</p>
+                        <ul class="project_text_list">
+                            <li>mysql, php, jquery, html, css으로 이루어진 뮤지엄다 웹사이트</li>
+                            <li>메인페이지 리뉴얼</li>
+                            <li>제작 소요시간 : 웹 1주일</li>
+                            <li>1인 프로젝트</li>
+                        </ul>
+                    </div>
+                    <div class="project_img">
+                        <a href="https://ziiihye.cafe24.com/msd/index.php"><img
+                                src="img/KakaoTalk_20221114_161720242.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main3">
+                <div class="profile">
+                    <p>ABout Me</p>
+                </div>
+                <ul class="power">
+                    <li>
+                        <div class="circle"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <aside class="navigate">
+            <div>down</div>
+        </aside>
+        <footer></footer>
+    </div>
+    <script src="/main/index.js" defer="defer"></script>
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+</body>
+
+</html>
