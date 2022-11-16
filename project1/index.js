@@ -1,10 +1,12 @@
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
 });
+
 window.onscroll = function () {
   var mainTwo = document.querySelector(".main2");
   var navigate = document.querySelector(".navigate");
   var headerBack = document.querySelector("header");
+  var main3 = document.querySelector(".main3").offsetTop;
 
   if (scrollY >= 850) {
     mainTwo.style.opacity = "1";
@@ -20,6 +22,11 @@ window.onscroll = function () {
     navigate.style.border = "1px solid #000";
     navigate.style.transition = "0.4s";
     headerBack.style.backgroundColor = "rgba(0, 0, 0, 0)";
+  }
+
+  if (scrollY > document.querySelector(".main3").offsetTop - 50) {
+    headerBack.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    headerBack.style.transition = "0.5s";
   }
 };
 
